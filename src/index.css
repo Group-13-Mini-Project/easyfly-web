@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a{
+  text-decoration: none;
+}
+
+.App{
+  min-width: 100%;
+  min-height:100vh ;
+}
+
+.home{
+  width: 100%;
+  min-width: none;
+  min-height:100vh;
+  background-image: url(./assets/pexels-pixabay-358319.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.heroSection{
+  width: 90%;
+  height: 50vh;
+  /* background-color: red; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
