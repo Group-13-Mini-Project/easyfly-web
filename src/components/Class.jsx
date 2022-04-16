@@ -25,10 +25,10 @@ const Class = () => {
                         value={clas}
                         label="Class"
                         onChange={handleChange}
-                        sx={{width: '120px'}}
+                        sx={{width: '140px'}}
                         >
                         <MenuItem value={'Economy'}>Economy</MenuItem>
-                        <MenuItem value={'Business'}>Business</MenuItem>
+                        <MenuItem value={'Business'}>Business Class</MenuItem>
                         <MenuItem value={'First class'}>First Class</MenuItem>
                         </Select>
         </FormControl>

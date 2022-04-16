@@ -17,8 +17,9 @@ a{
 }
 
 .App{
-  min-width: 100%;
+  min-width: 1440px;
   min-height:100vh ;
+  max-width: 1440px;
 }
 
 .home{
@@ -35,6 +36,6 @@ a{
   height: 50vh;
   /* background-color: red; */
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }

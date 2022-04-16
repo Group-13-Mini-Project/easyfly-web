@@ -24,7 +24,7 @@ const Header = () => {
 
             <Typography variant='h6'  component="div" sx={{ flexGrow: 1, color: '#505168' }}>EasyFly</Typography>
             <ButtonGroup size="small" aria-label="small button group">
-              <NavLink to={'/signin'}>
+              <NavLink to={'/signup'}>
                 <Button variant='Text' sx={{ color: '#505168' }}>Register</Button>
               </NavLink>
 
