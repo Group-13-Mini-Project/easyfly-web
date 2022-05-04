@@ -7,6 +7,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 // import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import DateRange from './DateRange';
 import Location from './Location';
+import { NavLink } from 'react-router-dom';
 
 
 const Main = () => {
@@ -15,7 +16,7 @@ const Main = () => {
     <div>
     <CssBaseline />
       <Container fixed>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '30vh', borderRadius: '10px', padding:'20px', background: '#FFFFFF',
+        <Box sx={{ bgcolor: '#cfe8fc', height: '31vh', borderRadius: '10px', padding:'20px', background: '#FFFFFF',
             boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',
             borderradius: '15px'}}>
             
@@ -35,7 +36,9 @@ const Main = () => {
             </div>
 
             <div>
-              <Button variant='contained' size='medium' sx={{marginTop: '10px', float: 'right', width:'200px', background: '#505168',}}>search flight   <ArrowRightAltIcon fontSize="large" /> </Button>
+              <NavLink to={"/flights"}>
+               <Button variant='contained' size='medium' sx={{marginTop: '10px', float: 'right', width:'200px', background: '#505168',}}>search flight   <ArrowRightAltIcon fontSize="large" /> </Button>
+              </NavLink>
             </div>
         </Box>
       </Container>

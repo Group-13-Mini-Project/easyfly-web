@@ -9,7 +9,7 @@ const Hero = () => {
       <CssBaseline />
       <Container maxWidth="xl" sx={{padding: '50px', display:'flex', justifyContent:'start', alignItems: 'center'}}>
         <Box sx={{ height: '45vh', padding: '50px 0',}} >
-          <Typography variant='h2'>Hey there! Where Would <br /> Like To Fly to?</Typography>
+          <Typography variant='h2'>Hey there! Where Would <br /> You Like To Fly to?</Typography>
 
           <NavLink to={'/signup'}>
                 <Button variant='contained' size='large' sx={{ background: '#505168', marginTop:'60px' }}>register</Button>

@@ -3,6 +3,7 @@ import Home from './Home'
 import Signin from './Signin'
 import {Route, Routes } from 'react-router-dom'
 import { Signup } from './Signup'
+import Flights from './Flights'
 
 const Pages = () => {
   return (
@@ -13,6 +14,7 @@ const Pages = () => {
         <Route path='/' element={<Home />}/>
         <Route path='/signin' element={<Signin />}/>
         <Route path='/signup' element={<Signup />}/>
+        <Route path='/flights' element={<Flights />}/>
       </Routes>
     
     </div>

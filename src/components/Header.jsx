@@ -21,11 +21,15 @@ const Header = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center', }}>
+            
+            <NavLink to={'/'}>
+              <Typography className='title' variant='h6'  component="div" sx={{ flexGrow: 1, color: '#505168' }}>EasyFly</Typography>
+            </NavLink>
 
-            <Typography variant='h6'  component="div" sx={{ flexGrow: 1, color: '#505168' }}>EasyFly</Typography>
             <ButtonGroup size="small" aria-label="small button group">
+
               <NavLink to={'/signup'}>
-                <Button variant='Text' sx={{ color: '#505168' }}>Register</Button>
+                <Button className='reg' variant='Text' sx={{ color: '#505168' }}>Register</Button>
               </NavLink>
 
               <NavLink to={'/signin'}>
