@@ -1,16 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Stack } from '@mui/material';
 import ConnectingAirportsIcon from '@mui/icons-material/ConnectingAirports';
 
+
+const airports = ['Kumasi (KMS)','Tamale (TML)', 'Accra (KIA)',]
+
 const Location = () => {
+
+const [value, setValue] = useState(null)
+console.log({value})
+  
   return (
     <Stack sx={{display:'flex', flexDirection:"row", alignItems:'center'}}>
     <Autocomplete
       disablePortal
       id="combo-box-demo"
       options={airports}
+      value={value}
+      onChange={(event, newValue) => setValue(newValue)}
       sx={{ width: 300, marginRight: '5px' }}
       renderInput={(params) => <TextField {...params} label="From" />}
     />
@@ -27,9 +36,6 @@ const Location = () => {
   )
 }
 
-const airports = [
-    { label: 'Kumasi (KMS)' },
-    { label: 'Tamale (TML)' },
-    { label: 'Accra (KIA)' },]
+
 
 export default Location

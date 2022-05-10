@@ -16,9 +16,9 @@ const Main = () => {
     <div>
     <CssBaseline />
       <Container fixed>
-        <Box sx={{ bgcolor: '#cfe8fc', height: '31vh', borderRadius: '10px', padding:'20px', background: '#FFFFFF',
-            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',
-            borderradius: '15px'}}>
+        <Box sx={{ bgcolor: '#cfe8fc', height: '31vh', borderRadius: '10px', padding:'20px', background: 'rgba(255, 255, 255, 0.77)',
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)', backdropFilter: 'blur(5px)',
+            borderradius: '15px',}}>
             
             <div>
                 <Box sx={{ height: '40px', width:'45%', display:'flex', justifyContent:'space-between',}}>
