@@ -7,22 +7,11 @@ import {useForm, Form} from '../components/useForm'
 
 
 
-const initialFvalues ={
-  id:0,
-  fullName: '',
-  email: '',
-  gender: 'male',
-  password: '',
-}
+
 
 const Signin = () => {
 
-  const {
-    values,
-    setValues,
-    handleInputChange,
-  } = useForm(initialFvalues);
-
+  
   
   return (
     <div>
@@ -41,7 +30,7 @@ const Signin = () => {
                   
                 <Form>
                       <Container sx={{width:'100%', height:'100%', display:'flex',flexDirection:"column", justifyContent:'center', alignItems:'center',}}>
-                        <TextField variant='standard' label="Full Name"  name='fullName' value={values.fullName}  onChange={handleInputChange} sx={{width:'80%'}}/>
+                        <TextField required variant='standard' label="Full Name"  name='fullName' value={values.fullName}  onChange={handleInputChange} sx={{width:'80%'}}/>
                         <TextField variant='standard' label="Email"  name='email' value={values.email} sx={{width:'80%', marginTop:'20px' }}/>
 
                         
