@@ -9,8 +9,10 @@ const airports = ['Kumasi (KMS)','Tamale (TML)', 'Accra (KIA)',]
 
 const Location = () => {
 
-const [value, setValue] = useState(null)
-console.log({value})
+const [from, setFrom] = useState(null)
+const [to, setTo] = useState(null)
+
+
   
   return (
     <Stack sx={{display:'flex', flexDirection:"row", alignItems:'center'}}>
@@ -18,8 +20,8 @@ console.log({value})
       disablePortal
       id="combo-box-demo"
       options={airports}
-      value={value}
-      onChange={(event, newValue) => setValue(newValue)}
+      value={from}
+      onChange={(event, newValue) => setFrom(newValue)}
       sx={{ width: 300, marginRight: '5px' }}
       renderInput={(params) => <TextField {...params} label="From" />}
     />
@@ -29,6 +31,8 @@ console.log({value})
       disablePortal
       id="combo-box-demo"
       options={airports}
+      value={to}
+      onChange={(event, newValue) => setTo(newValue)}
       sx={{ width: 300, marginLeft: '5px',}}
       renderInput={(params) => <TextField {...params} label="To" />}
     />

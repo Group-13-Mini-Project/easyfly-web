@@ -10,9 +10,10 @@ import AvailableFlights from '../components/AvailableFlights'
 
 
 
-const Flights = () => {
+const Flights = (props) => {
 
-   const place = 'Kumasi';
+  
+    const {from, to} = props
 
   return (
     <div>
@@ -27,7 +28,7 @@ const Flights = () => {
             borderradius: '15px',}}>
 
                 <Box sx={{height: '100px', width:'100%', display:'flex', justifyContent:'space-between',alignItems:'center', position:'static'}}>
-                    <Location />
+                    <Location  value={"Kumasi"}/>
                     <DateRange />
                     <Button sx={{background: '#505168'}}>
                         <SearchOutlinedIcon fontSize='large' sx={{color:'#fff'}} />
