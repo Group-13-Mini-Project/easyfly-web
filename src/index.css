@@ -43,3 +43,13 @@ form{
   justify-content: flex-start;
   align-items: center;
 }
+
+.visa{
+  margin-left: 250px;
+  
+}
+
+.cardId{
+  font-size: 1rem;
+  letter-spacing: 0.6rem;
+}
