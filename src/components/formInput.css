@@ -41,6 +41,12 @@ span{
     display: none;
 }
 
+.amount{
+    display: contents;
+    font-size: 1em;
+    color: #202020;
+}
+
 input:invalid[focused="true"]{
     border: 1px solid red;
 } 

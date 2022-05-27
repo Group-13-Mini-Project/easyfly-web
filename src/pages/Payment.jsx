@@ -1,12 +1,27 @@
 import React from 'react'
 import Header from '../components/Header'
 import { Container, Box, Typography, Button, TextField} from '@mui/material'
-import GoogleIcon from '@mui/icons-material/Google';
-import AppleIcon from '@mui/icons-material/Apple';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Modal from '@mui/material/Modal';
 
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 const Payment = () => {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
 
     <div>
@@ -16,19 +31,42 @@ const Payment = () => {
     <Box sx={{height: '80vh', width:'90%', padding:'20px', background: '#F8F9FA',
             borderradius: '15px', display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center',}}>
 
-            <Typography variant='h6'>Select Payment Method</Typography>
-            <Box sx={{height: '70px',width:"60%", display:'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center', marginTop:'50px'}}>
-                <Button variant='outlined' size='large' sx={{color: '#202020', border: '1px solid #202020', padding:"15px"}}><FontAwesomeIcon icon="fa-brands fa-paypal" /> paypal</Button>
-                <Button variant='outlined' size='large' sx={{color: '#202020', border: '1px solid #202020', padding:"15px"}}><AppleIcon /> Apple Pay</Button>
-                <Button variant='outlined' size='large' sx={{color: '#202020', border: '1px solid #202020', padding:"15px"}}><GoogleIcon /> Google Pay</Button>
-                <Button variant='outlined' size='large' sx={{color: '#202020', border: '1px solid #202020', padding:"15px"}}>Mobile Money</Button>
+            <Typography variant='h6'>Confirm Payment Details for GHC <span className='amount'>1200</span></Typography>
+
+            {/* debit card */}
+            <Box sx={{height: '200px',width:"30%",borderRadius:'15px',color:'#fff', bgcolor:'#505168', display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', marginTop:'50px'}}>
+            <div className='visa'><h2>VISA</h2></div>
+            <div className='cardId'><h4>... ... ...  ...   4576</h4></div>
+            <div><h6>User Name</h6></div>
             </Box>
             <Box sx={{height: '70px',width:"60%", display:'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center', marginTop:'50px'}}>
             <TextField id="outlined-basic" label="Card Number" variant="outlined" sx={{width:"45%"}} />
             <TextField id="outlined-basic" label="CVC" variant="outlined" sx={{width:"45%"}}/>
             </Box>
-    </Box>
-    </Container>
+
+            <Button onClick={handleOpen} variant='contained' size='large' sx={{marginTop:'50px', bgcolor:'#505168'}}>Make Payment </Button>
+
+            {/* modal */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    Payment successful
+                    </Typography>
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Your flights are booked and ready to go. View your boarding pass.
+                    </Typography>
+                    <Button variant="contained" sx={{marginTop: "20px"}}>view boarding pass</Button>
+
+
+                  </Box>
+                </Modal>
+              </Box>
+         </Container>
     </div>
 
   )
