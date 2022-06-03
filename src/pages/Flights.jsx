@@ -4,7 +4,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Location from '../components/Location'
 import DateRange from '../components/DateRange'
-import Pskeleton from '../components/Pskeleton'
+// import Pskeleton from '../components/Pskeleton'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import AvailableFlights from '../components/AvailableFlights'
 
@@ -13,7 +13,7 @@ import AvailableFlights from '../components/AvailableFlights'
 const Flights = (props) => {
 
   
-    const {from, to} = props
+  
 
   return (
     <div>

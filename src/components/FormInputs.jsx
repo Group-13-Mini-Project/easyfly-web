@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Input } from '@mui/material'
+
 import './formInput.css'
 
 const FormInputs = (props) => {
