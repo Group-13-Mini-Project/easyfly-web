@@ -63,13 +63,13 @@ const Payment = () => {
                     {/* <Button variant="contained" sx={{marginTop: "20px"}}>view boarding pass</Button> */}
                    
 
-                    <Box sx={{height: '410px',width:"100%",borderRadius:'15px',color:'#fff', bgcolor:'#505168', display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', marginTop:'0px'}}>
+                    <Box sx={{height: '410px',width:"100%",borderRadius:'15px',color:'#fff', bgcolor:'#505168', display:'flex', flexDirection:'column', justifyContent:'space-around', alignItems:'center', marginTop:'10px'}}>
                     
                     <div>
                       <h2>kumasi to Tamale</h2>
                     </div>
-                    <div><h4 className='flightNumber'>flight:Bl256</h4></div>
-                    <div><h4 className='seatNumber'>seat:42B</h4></div>
+                    <div><h4 className='flightNumber'>Flight:Bl256</h4></div>
+                    <div><h4 className='seatNumber'>Seat:42B</h4></div>
                     <div><h4 className='DepartureDate'>Date: 28/05/22</h4></div>
                     <div><h4 className='BoardingTime'>Boarding: 10:30pm</h4></div>
                     
