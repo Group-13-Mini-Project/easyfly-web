@@ -39,7 +39,7 @@ const Payment = () => {
             <div className='cardId'><h4>... ... ...  ...   4576</h4></div>
             <div><h6>User Name</h6></div>
             </Box>
-            <Box sx={{height: '70px',width:"60%", display:'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center', marginTop:'50px'}}>
+            <Box sx={{height: '70px',width:"40%", display:'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center', marginTop:'50px'}}>
             <TextField id="outlined-basic" label="Card Number" variant="outlined" sx={{width:"45%"}} />
             <TextField id="outlined-basic" label="CVC" variant="outlined" sx={{width:"45%"}}/>
             </Box>

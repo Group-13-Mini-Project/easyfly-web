@@ -2,10 +2,11 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import { Box } from '@mui/system'
-import { Button,  Container,  TextField, Typography } from '@mui/material'
-import {useForm, Form} from '../components/useForm'
+import { Button,  Container, Typography } from '@mui/material'
+// import {useForm, Form} from '../components/useForm'
 import FormInputs from '../components/FormInputs'
-import { NextPlanOutlined } from '@mui/icons-material'
+// import { NextPlanOutlined } from '@mui/icons-material'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -93,18 +94,7 @@ export const Signup = () => {
                     <form onSubmit={handleSubmit}>
 
                       <Container sx={{width:'100%', height:'100%', display:'flex',flexDirection:"column", justifyContent:'center', alignItems:'center',}}>
-                        {/* <TextField variant='standard' label="Full Name"  name='fullName' value={values.fullName}  onChange={handleInputChange} sx={{width:'80%'}}/>
-                        <TextField variant='standard' label="Email"  name='email' value={values.email} sx={{width:'80%', marginTop:'20px' }}/>
-
-
-                        <TextField variant='standard' label="Password"  name='password' value={values.password} sx={{width:'80%', marginTop:'20px' }}/>
-                        <TextField variant='standard' label="Confirm Password"  name='password' value={values.password} sx={{width:'80%', marginTop:'20px' }}/>
-                        <Box sx={{width: '100%', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
-                          <Button variant='contained' size='large' sx={{marginTop:"20px", width:'80%', bgcolor:'#F14336'}}>continue with google</Button>
-                          <Button variant='contained' size='large' sx={{marginTop:"20px", width:'80%'}}>continue with facebook</Button>
-                          <Button variant='contained' size='large' sx={{marginTop:"20px", width:'80%', bgcolor:'#e5e5e5', color:'#202020'}}>continue with apple</Button>
-                        </Box>
-                          <Button  variant='contained' size='medium' sx={{marginTop:'20px', bgcolor:"#505168" }}>Sign up</Button> */}
+                        
                         {inputs.map((input) =>( 
                         <FormInputs key={input.id} {...input} value={values[input.name]} onChange={onChange}/>
                         ))}
@@ -115,8 +105,9 @@ export const Signup = () => {
                           <Button variant='contained' size='large' sx={{marginTop:"20px", width:'70%', bgcolor:'#e5e5e5', color:'#202020'}}>continue with apple</Button>
                         </Box>
                        
-                        
+                        <NavLink to={"/"}>
                         <button className='submit'>SIGN UP</button>
+                        </NavLink>
                       </Container>
 
                      

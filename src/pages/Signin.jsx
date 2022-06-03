@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import Header from '../components/Header'
 import { Box } from '@mui/system'
-import { Button,  Container,  TextField, Typography } from '@mui/material'
-import {useForm, Form} from '../components/useForm'
+import { Button,  Container, Typography } from '@mui/material'
+// import {useForm, Form} from '../components/useForm'
 import FormInputs from '../components/FormInputs'
-import { NextPlanOutlined } from '@mui/icons-material'
+// import { NextPlanOutlined } from '@mui/icons-material'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -94,8 +95,9 @@ const Signin = () => {
                           <Button variant='contained' size='large' sx={{marginTop:"20px", width:'70%', bgcolor:'#e5e5e5', color:'#202020'}}>continue with apple</Button>
                         </Box>
                        
-                        
+                        <NavLink to={'/'}>
                         <button className='submit'>SIGN IN</button>
+                        </NavLink>
                       </Container>
 
                      
